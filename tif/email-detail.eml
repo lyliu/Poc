@@ -1,0 +1,93 @@
+Delivered-To: lly2196557302@gmail.com
+Received: by 2002:a25:e08f:0:0:0:0:0 with SMTP id x137csp450955ybg;
+        Fri, 10 Jan 2020 01:12:39 -0800 (PST)
+X-Google-Smtp-Source: APXvYqw3GvszQeCCYlj19GQj0LKE0vUaconXkKV0v50HAv0OCFql2yGiWXVQkN4foSttGdZ50upw
+X-Received: by 2002:adf:9104:: with SMTP id j4mr2322449wrj.221.1578647559653;
+        Fri, 10 Jan 2020 01:12:39 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1578647559; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oNUOzP3Vfm1G8AdMgZYi3Xhp7oE0ijzvsyrg6nwGOucxGhmVcDaoolD2Z3wsF+xqDC
+         P4AF3E7x1jlDQu4Q7DO84El6bxlB+wCCTDWEdKcaX8hrzjb51noBmL2Gw4kU3vdTJsCa
+         pzY58ceAoE2COU6LCfvJ8Lx9h9IglF11PoosIO087AGi4u0eBlh39JCYUd7CcF/uNjj7
+         DXDHklTt78T6dQO3EqsBpUqZKQNwEKSXhwNhfsaYOrhHHbnmn4oyzRbIu8/kJYIu/MGH
+         JhN9wftNlCkJQvz69nI/1+9RNh+DbwvG3yNIFXtVtfMBfcUZU064j7Pz8rPF7uLUY1jo
+         UIpw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:in-reply-to:mime-version:user-agent:date
+         :message-id:from:references:to:subject;
+        bh=mO1o/5BVLFXKDEdXL7R9Kj7hURs93HTjNnEND3LDJ20=;
+        b=kLzHIRvFLjK5O09nQS9rLO4qDb0Zy69+cXUj05MFOxRKx4x1QGNHfr85sfEqmVBcqU
+         6c2d9wDxPAkQJvuCTKQpnbUgwiZcVe7aEO0pXE5XByxwayrHsV72seQDU5Ya2L0B9uCV
+         9K8kyb+MC1uaMF4+6j7T533RftF5oaYiSr9THm3x1Hngua7VybAhbK8YAiO0GobByrLm
+         X0M+pzas7vPWqVAxj56+lMYxf5wA4Ut6BqjW2fmKBRJx+ISPnnAlqBmV0N9sdHlKKXjT
+         LmAFwb6dh5wXGFBJdxTT5uAzuE1yjRNDj+K3YoxoEom5/JzReHil92dmUczz0NLTwBzI
+         ounA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 178.33.44.193 is neither permitted nor denied by domain of contact@xnview.com) smtp.mailfrom=contact@xnview.com
+Return-Path: <contact@xnview.com>
+Received: from 9.mo14.mail-out.ovh.net (9.mo14.mail-out.ovh.net. [178.33.44.193])
+        by mx.google.com with ESMTPS id m26si1433131wmg.43.2020.01.10.01.12.39
+        for <lly2196557302@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 10 Jan 2020 01:12:39 -0800 (PST)
+Received-SPF: neutral (google.com: 178.33.44.193 is neither permitted nor denied by domain of contact@xnview.com) client-ip=178.33.44.193;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 178.33.44.193 is neither permitted nor denied by domain of contact@xnview.com) smtp.mailfrom=contact@xnview.com
+Received: from player792.ha.ovh.net (unknown [10.108.35.168])
+	by mo14.mail-out.ovh.net (Postfix) with ESMTP id 19EB81A33C6
+	for <lly2196557302@gmail.com>; Fri, 10 Jan 2020 10:12:39 +0100 (CET)
+Received: from xnview.com (lfbn-rei-1-36-245.w90-54.abo.wanadoo.fr [90.54.163.245])
+	(Authenticated sender: webmaster@xnview.com)
+	by player792.ha.ovh.net (Postfix) with ESMTPSA id C1015E1CDB4F
+	for <lly2196557302@gmail.com>; Fri, 10 Jan 2020 09:12:38 +0000 (UTC)
+Subject: Re: A Crash About Heap Corruption
+To: Liyan LIU <lly2196557302@gmail.com>
+References: <CALRfvYYLR+TeROcnMPWQEii1KQGfN5wnzAq7+DR3wW9tc_XU-A@mail.gmail.com>
+From: Pierre-e Gougelet <contact@xnview.com>
+Message-ID: <3d7d5b7b-8a56-c809-01d0-71d4555b0221@xnview.com>
+Date: Fri, 10 Jan 2020 10:12:39 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101
+ Firefox/52.0 SeaMonkey/2.49.5
+MIME-Version: 1.0
+In-Reply-To: <CALRfvYYLR+TeROcnMPWQEii1KQGfN5wnzAq7+DR3wW9tc_XU-A@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Antivirus: Avast (VPS 200109-0, 09/01/2020), Outbound message
+X-Antivirus-Status: Clean
+X-Ovh-Tracer-Id: 4613656345402276432
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: 0
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgedufedrvdeifecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecunecujfgurhepuffvfhfhkffffgggjggtgfesthekredttdefjeenucfhrhhomheprfhivghrrhgvqdgvucfiohhughgvlhgvthcuoegtohhnthgrtghtseignhhvihgvfidrtghomheqnecuffhomhgrihhnpehtfihithhtvghrrdgtohhmpdignhhvihgvfidrtghomhdpgihntghonhhvvghrthdrtghomhdpfhhigihpihgtthhurhgvrdhorhhgpdhfrggtvggsohhokhdrtghomhenucfkpheptddrtddrtddrtddpledtrdehgedrudeifedrvdegheenucfrrghrrghmpehmohguvgepshhmthhpqdhouhhtpdhhvghlohepphhlrgihvghrjeelvddrhhgrrdhovhhhrdhnvghtpdhinhgvtheptddrtddrtddrtddpmhgrihhlfhhrohhmpegtohhnthgrtghtseignhhvihgvfidrtghomhdprhgtphhtthhopehllhihvdduleeiheehjeeftddvsehgmhgrihhlrdgtohhmnecuvehluhhsthgvrhfuihiivgeptd
+
+Dear,
+
+Ok, will be fixed
+
+Best regards
+
+Liyan LIU wrote:
+> Dear developer:
+> I got a crash about the nconvert，the specific information is as follows:
+> 1. program: the latest version of the nconvert(command: nconvert.exe -out jpeg -truecolors sample) and xnview(xnconvert.exe)
+> 2. system: windows7-32/64
+> 3. description: The crash occurs when function free() is called. I think the cause of the crash is heap corruption and consequent access violation in the ntdllRtlpCoalesceFreeBlocks call when heap 
+> trying to combine two unused bocks into a bigger one.
+> 
+> I provide the sample and some detail about the crash.
+> 
+> Best wishes.
+
+-- 
+*-----------------------------------------------------------------*
+
+EMail:          mailto:contact@xnview.com
+
+Web site:       http://www.xnview.com
+                 http://www.xnconvert.com
+                 http://www.fixpicture.org
+
+Support & news: http://www.facebook.com/#!/xnview
+                 http://twitter.com/#!/xnview
+                 http://newsgroup.xnview.com/
+
+*-----------------------------------------------------------------*
